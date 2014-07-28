@@ -4,4 +4,12 @@ require "./lib/item"
 require "./lib/orderitem"
 require "./lib/order"
 
-p Order.group(:customer_id).sum(:amount).to_f
+
+order = Order.joins(:customer).select( :amount, "customers.name", "orders.id").each do |info|
+  p info[:name]
+  p info[:amount]
+  p info[:id]
+end
+
+
+

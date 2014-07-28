@@ -1,6 +1,6 @@
 require "active_record"
 
-class Orderitem < ActiveRecord::Base
+class OrderItem < ActiveRecord::Base
 
 end
 
