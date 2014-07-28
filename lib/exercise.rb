@@ -4,4 +4,4 @@ require "./lib/item"
 require "./lib/orderitem"
 require "./lib/order"
 
-p Customer.where(state: "Colorado")
+p Customer.limit(5)
