@@ -4,4 +4,4 @@ require "./lib/item"
 require "./lib/orderitem"
 require "./lib/order"
 
-p Order.select(:customer_id, :amount).group(:customer_id).maximum(:amount)
+p Customer.where(state: "Colorado")
