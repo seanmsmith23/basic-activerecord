@@ -4,5 +4,4 @@ require "./lib/item"
 require "./lib/orderitem"
 require "./lib/order"
 
-Item.find_by(name: "kayak01").destroy
-p Item.all
+p Order.group(:customer_id).sum(:amount).to_f
