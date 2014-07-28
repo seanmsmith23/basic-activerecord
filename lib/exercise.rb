@@ -5,7 +5,7 @@ require "./lib/orderitem"
 require "./lib/order"
 
 
-p Order.select( :amount, "customers.name", "customer.id").joins(:customer).order("customers.name").group("customers.name").sum(:amount)
+p Order.select( :amount, "customers.name", "customer.id").joins(:customer).order("customers.name").group("customers.name").average(:amount)
 
 
 
