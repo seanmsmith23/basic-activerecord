@@ -5,11 +5,7 @@ require "./lib/orderitem"
 require "./lib/order"
 
 
-order = Order.joins(:customer).select( :amount, "customers.name", "orders.id").each do |info|
-  p info[:name]
-  p info[:amount]
-  p info[:id]
-end
+p Order.select( :amount, "customers.name", "customer.id").joins(:customer).order("customers.name").group("customers.name").sum(:amount)
 
 
 
