@@ -4,4 +4,4 @@ require "./lib/item"
 require "./lib/orderitem"
 require "./lib/order"
 
-p Customer.order(:name)
+p Customer.order(:name).reverse
