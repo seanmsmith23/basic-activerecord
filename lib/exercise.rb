@@ -5,12 +5,7 @@ require "./lib/orderitem"
 require "./lib/order"
 
 
-Order.select( :amount, "customers.name", "customers.id").joins(:customer).order("customers.name").group("customers.name", "customers.id").average(:amount).each do |array|
-  p "AVG ORDER AMOUNT: #{array[1].to_f.round(2)}, NAME: #{array[0][0]}, CUSTOMER ID: #{array[0][1]}"
+Order.select("*").joins(orderitems: :item).where("orders.customer_id" => 2).each do |thing|
+   thing[:name]
+   thing[:customer_id]
 end
-
-# p Order.select( :amount, "customers.name", "customers.id").joins(:customer).order("customers.name").group("customers.name", "customers.id").average(:amount).first
-
-
-
-
