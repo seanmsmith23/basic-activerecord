@@ -4,4 +4,4 @@ require "./lib/item"
 require "./lib/orderitem"
 require "./lib/order"
 
-p Customer.select(:name, :email)
+p Customer.select(:id, :name, :address)
