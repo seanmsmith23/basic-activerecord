@@ -4,4 +4,4 @@ require "./lib/item"
 require "./lib/orderitem"
 require "./lib/order"
 
-p Customer.where(state: "Colorado", city: "Rigobertoside")
+p Customer.where(:state => ["Ohio", "Virginia"])
