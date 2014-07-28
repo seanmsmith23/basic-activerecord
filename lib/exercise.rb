@@ -4,4 +4,4 @@ require "./lib/item"
 require "./lib/orderitem"
 require "./lib/order"
 
-p Order.maximum(:amount).to_f
+p Order.select(:customer_id, :amount).group(:customer_id).minimum(:amount)
