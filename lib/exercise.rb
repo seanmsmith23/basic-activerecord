@@ -4,4 +4,4 @@ require "./lib/item"
 require "./lib/orderitem"
 require "./lib/order"
 
-p Order.sum(:amount).to_i
+p Order.where(customer_id: 4).sum(:amount).to_f
